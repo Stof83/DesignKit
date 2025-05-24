@@ -1,0 +1,27 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+import UIKit.UIImage
+import SwiftUI
+
+// MARK: - UIImage
+
+extension UIImage {
+  {% for catalog in catalogs %}
+    {% for image in catalog.assets %}
+    public static let {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = UIImage(named: "{{ image.name }}", in: .module, with: nil)!
+    {% endfor %}
+  {% endfor %}
+}
+
+// MARK: - Image
+
+extension Image {
+  {% for catalog in catalogs %}
+    {% for image in catalog.assets %}
+    public static let {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Image("{{ image.name }}", bundle: .module)
+    {% endfor %}
+  {% endfor %}
+}
+
+// swiftlint:enable all
