@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "DesignKit", targets: ["DesignKit"]),
     ],
     dependencies: [
-        .package(url: "git@gitlab.com:wesdks/wepackages/weswiftpackages/UtilitiesKit.git", .upToNextMajor(from: "2.4.8")),
+        .package(url: "https://github.com/Stof83/UtilitiesKit.git", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/twho/loading-buttons-ios.git", .upToNextMajor(from: "0.1.3")),
         .package(url: "https://github.com/ArtSabintsev/FontBlaster.git", .upToNextMajor(from: "5.3.0")),
         .package(url: "https://github.com/airbnb/lottie-ios", .upToNextMajor(from: "4.3.3")),
